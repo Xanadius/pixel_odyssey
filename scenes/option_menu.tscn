@@ -1,0 +1,167 @@
+[gd_scene load_steps=7 format=3 uid="uid://54uu3l81cmj7"]
+
+[ext_resource type="Texture2D" uid="uid://c1flqopve8wcy" path="res://art/menu/29019077_7481714.jpg" id="1_mlc3f"]
+[ext_resource type="Script" path="res://scripts/option_menu.gd" id="1_sjorj"]
+
+[sub_resource type="SystemFont" id="SystemFont_7awkd"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_s2o7s"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_55j7a"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_jinw4"]
+font_names = PackedStringArray("Public Pixel")
+
+[node name="option_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sjorj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1141.0
+offset_bottom = 671.0
+texture = ExtResource("1_mlc3f")
+expand_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_7awkd")
+theme_override_font_sizes/font_size = 32
+text = "Keybins"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Move Up :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = " W or Arrow Up"
+
+[node name="Control5" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Move Left :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = " A or Arrow Left"
+
+[node name="Control4" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Move Down :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = " S or Arrow Down"
+
+[node name="Control6" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Move Right :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = "D or Arrow Right"
+
+[node name="Control3" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Attack :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = " Z or Left Mouse Button"
+
+[node name="Control2" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_s2o7s")
+text = "Pause :"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_55j7a")
+text = "Esc or Backspace"
+
+[node name="back_button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = SubResource("SystemFont_jinw4")
+theme_override_font_sizes/font_size = 32
+text = "<"

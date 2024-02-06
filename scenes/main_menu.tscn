@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnktm166c0smk"]
+
+[ext_resource type="Texture2D" uid="uid://c1flqopve8wcy" path="res://art/menu/29019077_7481714.jpg" id="1_iot3b"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_mgv1s"]
+
+[sub_resource type="SystemFont" id="SystemFont_g6f5o"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_j6os5"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_cmq5d"]
+font_names = PackedStringArray("Public Pixel")
+
+[sub_resource type="SystemFont" id="SystemFont_ib3hh"]
+font_names = PackedStringArray("Public Pixel")
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mgv1s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_iot3b")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 645.0
+rotation = 0.00618849
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_g6f5o")
+theme_override_font_sizes/font_size = 48
+text = "PIXEL ODYSSEY: A JOURNEY THROUGH SPACETIME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_j6os5")
+action_mode = 0
+text = "START"
+
+[node name="option_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_cmq5d")
+action_mode = 0
+text = "OPTION"
+
+[node name="quit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ib3hh")
+text = "QUIT"
